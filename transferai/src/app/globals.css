@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f1f3d;
+
+  --color-ink: #0f1f3d;
+  --color-ink-soft: #4c5c7a;
+
+  --color-blue-900: #102a63;
+  --color-blue-700: #1e4fbf;
+  --color-blue-600: #2a5cd6;
+  --color-blue-100: #e8eefc;
+  --color-blue-50: #f5f8ff;
+
+  --color-line: #d7e1f5;
+  --color-line-soft: #e9eefb;
+
+  --color-success-ink: #1e6b4d;
+  --color-success-bg: #e5f4ec;
+  --color-warning-ink: #8a5a10;
+  --color-warning-bg: #fbf1da;
+  --color-danger-ink: #a83a2c;
+  --color-danger-bg: #fbeae6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+
+  --color-blue-900: var(--color-blue-900);
+  --color-blue-700: var(--color-blue-700);
+  --color-blue-600: var(--color-blue-600);
+  --color-blue-100: var(--color-blue-100);
+  --color-blue-50: var(--color-blue-50);
+
+  --color-line: var(--color-line);
+  --color-line-soft: var(--color-line-soft);
+
+  --color-success-ink: var(--color-success-ink);
+  --color-success-bg: var(--color-success-bg);
+  --color-warning-ink: var(--color-warning-ink);
+  --color-warning-bg: var(--color-warning-bg);
+  --color-danger-ink: var(--color-danger-ink);
+  --color-danger-bg: var(--color-danger-bg);
+
+  --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  --font-sans: -apple-system, "Segoe UI", "IBM Plex Sans", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-blue-100);
+  color: var(--color-blue-900);
+}
+
+@media print {
+  header, footer, .no-print {
+    display: none !important;
+  }
+}
